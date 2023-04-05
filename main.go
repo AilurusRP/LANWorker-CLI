@@ -5,12 +5,16 @@ import (
 	"os"
 )
 
+var IP string
+var PORT string = ":7684"
+
 func main() {
 	ip, err := getLocalIP()
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
+	IP = ip
 	fmt.Printf("Your current desktop local IP address: %s\n\n", ip)
 
 	qrString, err := generateQRCode(ip)
