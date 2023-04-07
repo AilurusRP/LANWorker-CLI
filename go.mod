@@ -31,7 +31,9 @@ require (
 )
 
 require (
+	github.com/eiannone/keyboard v0.0.0-20220611211555-0d226195f203
 	github.com/r3labs/sse/v2 v2.10.0
 	golang.org/x/net v0.8.0 // indirect
+	gopkg.in/antage/eventsource.v1 v1.0.0-20150318155416-803f4c5af225
 	gopkg.in/cenkalti/backoff.v1 v1.1.0 // indirect
 )

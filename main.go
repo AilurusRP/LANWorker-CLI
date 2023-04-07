@@ -29,9 +29,7 @@ func main() {
 	// Example:
 	//     $ LANWorker-desktop /var/www/LANWorker-web
 	if len(os.Args) >= 2 {
-		startServer(os.Args[1])
-	} else {
-		startServer()
+		serveWebpage(os.Args[1])
 	}
-
+	startServer()
 }
