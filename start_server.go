@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"strings"
 
 	"gopkg.in/antage/eventsource.v1"
 )
@@ -67,6 +68,9 @@ func receiveMsg() {
 }
 
 func serveWebpage(webPath string) {
+	if !strings.HasSuffix(webPath, "/") {
+		webPath = webPath + "/"
+	}
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir(webPath+"static"))))
 	http.HandleFunc("/web", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, webPath+"index.html")

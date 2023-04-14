@@ -16,6 +16,7 @@ func msgInput() string {
 	for scanner.Scan() {
 		line := scanner.Text()
 		if line == ":" {
+			msg = msg[:len(msg)-1]
 			break
 		}
 		msg += line + "\n"
