@@ -1,4 +1,4 @@
-package main
+package input
 
 import (
 	"bufio"
@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func msgInput() string {
+func MsgInput() string {
 	fmt.Println("Input your message below.")
 	fmt.Println("To finish input and send the message, type `:` in a new line and press `Enter`.")
 	fmt.Println("--------------------Your Message-------------------")

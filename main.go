@@ -1,24 +1,17 @@
 package main
 
 import (
+	"LANWorker-desktop/info"
+	"LANWorker-desktop/server"
 	"flag"
 	"fmt"
 )
 
-var IP string
-
-const PORT string = ":7684"
-
 func main() {
-	ip, err := getLocalIP()
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	IP = ip
-	fmt.Printf("Your current desktop local IP address: %s\n\n", ip)
+	info.GetLocalIP()
+	fmt.Printf("Your current desktop local IP address: %s\n\n", info.IP)
 
-	qrString, err := generateQRCode(ip)
+	qrString, err := generateQRCode(info.IP)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -32,7 +25,7 @@ func main() {
 	webPath := flag.String("path", "", "the path of the LANWorker-web directory")
 	flag.Parse()
 	if *webPath != "" {
-		serveWebpage(*webPath)
+		server.ServeWebpage(*webPath)
 	}
-	startServer()
+	server.StartServer()
 }
