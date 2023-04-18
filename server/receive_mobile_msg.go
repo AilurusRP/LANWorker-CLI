@@ -8,7 +8,7 @@ import (
 )
 
 func receiveMobileMsg() {
-	http.HandleFunc("/mobilemsg", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/mobile-msg", func(w http.ResponseWriter, r *http.Request) {
 		body, err := io.ReadAll(r.Body)
 		if err != nil {
 			fmt.Printf("read body err, %v\n", err)

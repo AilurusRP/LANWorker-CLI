@@ -8,7 +8,7 @@ import (
 )
 
 func receiveWebMsg() {
-	http.HandleFunc("/webmsg", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/web-msg", func(w http.ResponseWriter, r *http.Request) {
 		body, err := io.ReadAll(r.Body)
 		if err != nil {
 			fmt.Printf("read body err, %v\n", err)
