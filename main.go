@@ -1,10 +1,10 @@
 package main
 
 import (
-	"LANWorker-CLI/info"
-	"LANWorker-CLI/server"
 	"flag"
 	"fmt"
+	"lanworker/info"
+	"lanworker/server"
 	"os/user"
 )
 

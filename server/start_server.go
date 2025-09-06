@@ -7,8 +7,8 @@ import (
 
 	"gopkg.in/antage/eventsource.v1"
 
-	"LANWorker-CLI/info"
-	"LANWorker-CLI/input"
+	"lanworker/info"
+	"lanworker/input"
 )
 
 type ReceivedMsg struct {

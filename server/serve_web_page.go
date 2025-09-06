@@ -1,8 +1,8 @@
 package server
 
 import (
-	"LANWorker-CLI/info"
 	"fmt"
+	"lanworker/info"
 	"net/http"
 	"strings"
 )
