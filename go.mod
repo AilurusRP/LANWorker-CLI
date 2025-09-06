@@ -1,4 +1,4 @@
-module LANWorker-desktop
+module LANWorker-CLI
 
 go 1.20
 

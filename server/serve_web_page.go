@@ -1,7 +1,7 @@
 package server
 
 import (
-	"LANWorker-desktop/info"
+	"LANWorker-CLI/info"
 	"fmt"
 	"net/http"
 	"strings"
@@ -18,5 +18,5 @@ func ServeWebpage(webPath string) {
 
 	fmt.Println("The LANWorker webpage is now running,")
 	fmt.Printf("visit http://%s%s/web to use LANWorker-web. \n", info.IP, info.PORT)
-	fmt.Print("Make sure your device is in the same LAN with LANWorker-desktop.\n\n")
+	fmt.Print("Make sure your device is in the same LAN with LANWorker-CLI.\n\n")
 }
