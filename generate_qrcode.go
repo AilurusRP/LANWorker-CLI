@@ -5,7 +5,7 @@ import (
 )
 
 func generateQRCode(ip string) (string, error) {
-	if q, err := qrcode.New("http://"+ip+":7684/web", 1); err != nil {
+	if q, err := qrcode.New("http://"+ip+":7684", 1); err != nil {
 		return "", err
 	} else {
 		q.DisableBorder = true
