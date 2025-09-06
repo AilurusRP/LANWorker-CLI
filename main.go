@@ -5,6 +5,7 @@ import (
 	"LANWorker-CLI/server"
 	"flag"
 	"fmt"
+	"os/user"
 )
 
 func main() {
@@ -26,6 +27,13 @@ func main() {
 	flag.Parse()
 	if *webPath != "" {
 		server.ServeWebpage(*webPath)
+	} else {
+		currentUser, err := user.Current()
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		server.ServeWebpage(currentUser.HomeDir + "/LANWorker-web")
 	}
 	server.StartServer()
 }
